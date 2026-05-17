@@ -2,54 +2,47 @@ import SectionWrapper from '../components/SectionWrapper'
 import GoldDivider from '../components/GoldDivider'
 import VideoCard from '../components/VideoCard'
 import { AlertCircle } from 'lucide-react'
-import liveAtYamaha from '../assets/videos/live-at-yamaha.mp4'
-import liveAtYamaha2 from '../assets/videos/live-at-yamaha2.mp4'
-import libraryCafeSandton from '../assets/videos/library-cafe-sandton.mp4'
-import signaturePerformance from '../assets/videos/library-cafe.mp4'
-import blackLabone from '../assets/videos/black-labone1.mp4'
-import blackLabone2 from '../assets/videos/black-labone2.mp4'
-import jamSession from '../assets/videos/live-jazz-session.mp4'
 
 const videos = [
   {
     title:       'Live at Yamaha Music and Tech Conference',
     description: 'Intimate lounge setting — original Afro-contemporary jazz composition.',
     badge:       'Essential',
-    url:         liveAtYamaha,
+    vimeoId:     '1193015946',
   },
   {
     title:       'Jazzifying The Library Cafe at Sandton',
     description: 'Full evening performance captured at a premium cafe.',
     badge:       'Highlight',
-    url:         libraryCafeSandton,
+    vimeoId:     '1193015087',
   },
   {
     title:       'Three-Piece Performance at Yamaha Conference',
-    description: 'Afro-contemporary jazz ensemble piano, bass, and drums',
+    description: 'Afro-contemporary jazz ensemble — piano, bass, and drums.',
     badge:       'Essential',
-    url:         liveAtYamaha2,
+    vimeoId:     '1193021183',
   },
   {
     title:       'Live Jazz at Black Labone',
     description: 'Live crowd interaction and atmosphere from an executive event.',
     badge:       'Essential',
-    url:         blackLabone,
+    vimeoId:     '1193001105',
   },
   {
     title:       'Signature Performance Showcase in Sandton',
     description: 'High-quality recording showcasing full range of artistry and stage presence.',
     badge:       'Highlight',
-    url:         signaturePerformance,
+    vimeoId:     '1193008119',
   },
-    {
+  {
     title:       'Live Jazz Jam Session',
-    description: 'Informal jam session video highlighting improvisational skills and musical chemistry.',
-    url:         jamSession,
+    description: 'Informal jam session highlighting improvisational skills and musical chemistry.',
+    vimeoId:     '1193019699',
   },
   {
     title:       'Live Performance at Sanctuary Mandela',
-    description: 'Elegant lounge performance in a luxury hotel setting, showcasing refined stage presence and audience engagement.',
-    url:         blackLabone2,
+    description: 'Elegant lounge performance in a luxury hotel setting.',
+    vimeoId:     '1193013171',
   },
 ]
 
@@ -128,7 +121,7 @@ export default function Videos() {
             title={videos[0].title}
             description={videos[0].description}
             badge={videos[0].badge}
-            url={videos[0].url}
+            vimeoId={videos[0].vimeoId}
             index={0}
           />
         </div>
@@ -147,7 +140,7 @@ export default function Videos() {
               title={video.title}
               description={video.description}
               badge={video.badge}
-              url={video.url}
+              vimeoId={video.vimeoId}
               index={i + 1}
             />
           ))}
