@@ -14,7 +14,7 @@ const videos = [
   {
     title:       'Live at Yamaha Music and Tech Conference',
     description: 'Intimate lounge setting — original Afro-contemporary jazz composition.',
-    badge:       'Essential',
+    badge:       'Highlight',
     url:         liveAtYamaha,
   },
   {
@@ -25,8 +25,7 @@ const videos = [
   },
   {
     title:       'Three-Piece Performance at Yamaha Conference',
-    description: 'Afro-contemporary jazz ensemble piano, bass, and drums',
-    badge:       'Essential',
+    description: 'Contemporary jazz ensemble piano, bass, and drums',
     url:         liveAtYamaha2,
   },
   {
