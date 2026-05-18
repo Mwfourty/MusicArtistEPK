@@ -1,9 +1,8 @@
 import { useState } from 'react'
 import { Play, ExternalLink } from 'lucide-react'
 
-export default function VideoCard({ title, description, vimeoId, badge, index = 0 }) {
+export default function VideoCard({ title, description, url = '#', badge, index = 0 }) {
   const [hovered, setHovered] = useState(false)
-  const url = vimeoId ? `https://vimeo.com/${vimeoId}` : '#'
 
   // Staggered cinematic tones
   const tones = [
@@ -37,7 +36,22 @@ export default function VideoCard({ title, description, vimeoId, badge, index = 
         marginBottom:'0.9rem',
         transition:  'border-color 0.3s',
       }}>
-        {/* Vimeo preview is linked externally; no inline video preview for remote Vimeo content */}
+        {url !== '#' && (
+          <video
+            src={url}
+            autoPlay
+            muted
+            loop
+            playsInline
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+            }}
+          />
+        )}
 
         {/* Widescreen letterbox bars */}
         <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '10%', background: 'rgba(0,0,0,0.5)' }} />
