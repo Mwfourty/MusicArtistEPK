@@ -79,7 +79,7 @@ export default function Formats() {
             opacity:      0.65,
             lineHeight:   1.8,
           }}>
-            Original Afro-contemporary compositions · Smooth jazz standards ·
+            Original contemporary compositions · Smooth jazz standards ·
             Soul jazz · Contemporary lounge · Elegant instrumental classics
           </p>
         </div>

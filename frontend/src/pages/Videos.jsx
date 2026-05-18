@@ -2,47 +2,54 @@ import SectionWrapper from '../components/SectionWrapper'
 import GoldDivider from '../components/GoldDivider'
 import VideoCard from '../components/VideoCard'
 import { AlertCircle } from 'lucide-react'
+import liveAtYamaha from '../assets/videos/live-at-yamaha.mp4'
+import liveAtYamaha2 from '../assets/videos/live-at-yamaha2.mp4'
+import libraryCafeSandton from '../assets/videos/library-cafe-sandton.mp4'
+import signaturePerformance from '../assets/videos/library-cafe.mp4'
+import blackLabone from '../assets/videos/black-labone1.mp4'
+import blackLabone2 from '../assets/videos/black-labone2.mp4'
+import jamSession from '../assets/videos/live-jazz-session.mp4'
 
 const videos = [
   {
     title:       'Live at Yamaha Music and Tech Conference',
     description: 'Intimate lounge setting — original Afro-contemporary jazz composition.',
     badge:       'Essential',
-    vimeoId:     '1193015946',
+    url:         liveAtYamaha,
   },
   {
     title:       'Jazzifying The Library Cafe at Sandton',
     description: 'Full evening performance captured at a premium cafe.',
     badge:       'Highlight',
-    vimeoId:     '1193015087',
+    url:         libraryCafeSandton,
   },
   {
     title:       'Three-Piece Performance at Yamaha Conference',
-    description: 'Afro-contemporary jazz ensemble — piano, bass, and drums.',
+    description: 'Afro-contemporary jazz ensemble piano, bass, and drums',
     badge:       'Essential',
-    vimeoId:     '1193021183',
+    url:         liveAtYamaha2,
   },
   {
     title:       'Live Jazz at Black Labone',
     description: 'Live crowd interaction and atmosphere from an executive event.',
     badge:       'Essential',
-    vimeoId:     '1193001105',
+    url:         blackLabone,
   },
   {
     title:       'Signature Performance Showcase in Sandton',
     description: 'High-quality recording showcasing full range of artistry and stage presence.',
     badge:       'Highlight',
-    vimeoId:     '1193008119',
+    url:         signaturePerformance,
   },
-  {
+    {
     title:       'Live Jazz Jam Session',
-    description: 'Informal jam session highlighting improvisational skills and musical chemistry.',
-    vimeoId:     '1193019699',
+    description: 'Informal jam session video highlighting improvisational skills and musical chemistry.',
+    url:         jamSession,
   },
   {
     title:       'Live Performance at Sanctuary Mandela',
-    description: 'Elegant lounge performance in a luxury hotel setting.',
-    vimeoId:     '1193013171',
+    description: 'Elegant lounge performance in a luxury hotel setting, showcasing refined stage presence and audience engagement.',
+    url:         blackLabone2,
   },
 ]
 
@@ -89,31 +96,6 @@ export default function Videos() {
           </p>
         </div>
 
-        {/* Priority notice */}
-        <div style={{
-          display:    'flex',
-          alignItems: 'flex-start',
-          gap:        '0.75rem',
-          maxWidth:   '900px',
-          margin:     '0 auto 3rem',
-          padding:    '1rem 1.5rem',
-          background: 'rgba(201,168,76,0.05)',
-          border:     '1px solid rgba(201,168,76,0.2)',
-          borderLeft: '3px solid var(--gold)',
-        }}>
-          <AlertCircle size={14} color="var(--gold)" style={{ marginTop: '0.15rem', flexShrink: 0 }} />
-          <p style={{
-            fontFamily: 'var(--font-body)',
-            fontSize:   '0.72rem',
-            fontWeight: 300,
-            color:      'var(--cream)',
-            opacity:    0.75,
-            lineHeight: 1.7,
-          }}>
-            <strong style={{ fontWeight: 500, color: 'var(--gold)' }}>Booking agencies note:</strong>{' '}
-            Videos marked <em>Essential</em> are required for cruise ship and luxury residency applications. Prioritise clean audio, excellent lighting, and visible audience engagement.
-          </p>
-        </div>
 
         {/* Featured video — large */}
         <div style={{ maxWidth: '900px', margin: '0 auto 3rem' }}>
@@ -121,7 +103,7 @@ export default function Videos() {
             title={videos[0].title}
             description={videos[0].description}
             badge={videos[0].badge}
-            vimeoId={videos[0].vimeoId}
+            url={videos[0].url}
             index={0}
           />
         </div>
@@ -140,7 +122,7 @@ export default function Videos() {
               title={video.title}
               description={video.description}
               badge={video.badge}
-              vimeoId={video.vimeoId}
+              url={video.url}
               index={i + 1}
             />
           ))}
